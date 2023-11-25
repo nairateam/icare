@@ -50,7 +50,7 @@ const Signup = ({btn}) => {
         setEmail('')
         setPassword('')
         setConfirmPassword('')
-        navigate('/diagnosis');
+        navigate('/');
       }
 
   return (
