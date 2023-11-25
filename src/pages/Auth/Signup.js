@@ -17,7 +17,7 @@ const Signup = ({btn}) => {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState();
 
-    navigate = useNavigate();
+    const navigate = useNavigate();
 
     // Confirms if passwords are the same
     const validatePassword = () => {
@@ -50,7 +50,7 @@ const Signup = ({btn}) => {
         setEmail('')
         setPassword('')
         setConfirmPassword('')
-        navigator('/diagnosis');
+        navigate('/diagnosis');
       }
 
   return (
