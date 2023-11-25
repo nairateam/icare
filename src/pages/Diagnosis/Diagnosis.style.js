@@ -32,3 +32,38 @@ export const DiagnoseWrap = styled.section`
         }
     }
 `
+
+export const ResponseWrap = styled.section`
+    padding: 10px 50px;
+    color: #FFF;
+    .aiChat{
+        padding: 30px 20px;
+        border-radius: 4px;
+        background: #FFF;
+        min-width: 200px;
+        color: #000;
+        span{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            img{
+                width: 30px;
+                height: 30px;
+                background: white;
+                padding: 5px;
+                border-radius: 50%;
+            }
+        }
+        h5{
+            font-size: 18px;
+            margin: 0;
+            text-transform: capitalize;
+        }
+        p{
+            margin: 0;
+            padding: 10px 48px;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+`

@@ -8,6 +8,23 @@ body {
   background-color: #073161;
 }
 
+button{
+  cursor: pointer;
+}
+
+.pendChat{
+  padding: 40px;
+  text-align: center;
+  color: grey;
+}
+.pendChat > h2{
+  display: inline-block;
+  color: #FFF;
+  padding: 20px 60px;
+  border-radius: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.247);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -55,3 +55,14 @@ export const HeroWrap = styled.section`
         }
     }
 `
+
+export const Foot = styled.section`
+    text-align: center;
+    padding: 5px 40px;
+    border: 1px solid #6D6E6F;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    color: grey;
+    font-size: 14px;
+`
