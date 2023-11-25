@@ -53,7 +53,7 @@ const Login = ({btn}) => {
                         placeholder="Enter your password" />
                     </div>
                     <div className="btnHolder">
-                        <SmallBtn type='submit' btn="SIgn in"><Link>{btn}</Link></SmallBtn>
+                        <SmallBtn type='submit' btn="SIgn in"><Link to='/diagnosis'>{btn}</Link></SmallBtn>
                     </div>
                     <a href='forgotPass' className="forgotPass">
                         forgot password

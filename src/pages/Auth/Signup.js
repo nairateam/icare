@@ -4,10 +4,10 @@ import { InnerLog, LogWrap } from './Login.style'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faComment } from '@fortawesome/free-solid-svg-icons'
 import { SmallBtn } from '../../components/Button/Button'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {auth} from '../../FirebaseConfig'
 import {createUserWithEmailAndPassword} from 'firebase/auth'
-import { useAuthValue } from './Context'
+// import { useAuthValue } from './Context'
 
 const Signup = ({btn}) => {
     
@@ -16,6 +16,8 @@ const Signup = ({btn}) => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState();
+
+    navigate = useNavigate();
 
     // Confirms if passwords are the same
     const validatePassword = () => {
@@ -39,17 +41,16 @@ const Signup = ({btn}) => {
         setError('')
         if(validatePassword()) {
           // Create a new user with email and password using firebase
-            createUserWithEmailAndPassword(auth, displayName, email, password)
+            createUserWithEmailAndPassword(auth, email, password)
             .then((res) => {
                 console.log(res.user)
               })
             .catch(err => setError(err.message))
         }
-        setDisplayName('')
         setEmail('')
         setPassword('')
         setConfirmPassword('')
-        console.log(email, password, confirmPassword);
+        navigator('/diagnosis');
       }
 
   return (
@@ -91,6 +92,7 @@ const Signup = ({btn}) => {
                         onChange={(e)=>setConfirmPassword(e.target.value)}
                         placeholder="Confirm password" />
                     </div>
+                    <p>{error}</p>
                     <div className="btnHolder">
                         <SmallBtn type='submit' btn="SIgn up"><Link to='/diagnosis'>{btn}</Link></SmallBtn>
                     </div>

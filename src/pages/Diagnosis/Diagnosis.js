@@ -14,6 +14,7 @@ const Diagnosis = () => {
 
   const navigate = useNavigate()
   const user = auth.currentUser
+  const userEmail = user ? user.email : '';
 
   const baseURL = "https://klusterthon-backend.onrender.com/api/diagnose";
 
@@ -41,7 +42,7 @@ const Diagnosis = () => {
           <Navigation />
           <DiagnoseWrap>
             <div className="diagnoseBoard">
-              <p>Welcome back, Femi!</p>
+            <p>Welcome back, {userEmail || 'Guest'}!</p>
               <form action="" onSubmit={handleSubmit}>
                 <h3>Symptoms Description</h3>
                 <input
