@@ -1,19 +1,20 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/theme";
 
 export const LogWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 80vh;
 `
 
 export const InnerLog = styled.div`
     min-width: 400px;
     border-radius: 2px;
-    background-color: #FFF;
+    background-color: #FFFFF0;
     box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 21px -4px;
-    min-height: 400px;
+    /* min-height: 400px; */
     text-align: center;
     padding: 30px;
     margin: 0 auto;
@@ -41,5 +42,9 @@ export const InnerLog = styled.div`
         .btnHolder{
             margin: 10px 0;
         }
+    }
+    ${breakpoints.sm}{
+        min-width: 300px;
+        padding: 40px 20px;
     }
 `

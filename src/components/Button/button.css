@@ -9,6 +9,13 @@
         margin-top: 10px;
         font-family: 'Montserrat', sans-serif;
 }
+@media (max-width: 500px) {
+    .btn{
+            width: 140px;
+            height: 45px;
+        }
+    }
+
 .btn:hover{
     transform: translateY(-5px);
     transition: .5s ease-in-out;

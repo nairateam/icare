@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/theme";
 
 export const Navbar = styled.section`
     display: flex;
@@ -29,6 +30,19 @@ export const Navbar = styled.section`
         a{
             color: #FFF;
             text-decoration: none;
+        }
+        ${breakpoints.sm}{
+            width: 140px;
+            height: 45px;
+        }
+    }
+    ${breakpoints.lg}{
+        padding: 10px 20px;
+    }
+    ${breakpoints.sm}{
+        padding: 10px 20px 10px 10px;
+        ul{
+            display: none;
         }
     }
 `

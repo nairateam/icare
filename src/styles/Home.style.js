@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "./theme";
 
 export const HomeWrap = styled.div`
     background-color: #073161;
@@ -42,17 +43,44 @@ export const HeroWrap = styled.section`
             color: #FFF;
             text-decoration: none;
         }
-
+    }
+    ${breakpoints.lg}{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    ${breakpoints.md}{
+        h2{
+            font-size: 38px;
+        }
+    }
+    ${breakpoints.sm}{
+        h2{
+            font-size: 32px;
+            line-height: 38px;
+        }
+        p{
+            font-size: 14px;
+            padding: 0 20px;
+        }
     }
     }
     .rightHero{
         padding: 0;
         margin: 0;
+        box-sizing: border-box;
         img{
             object-fit: cover;
             object-position: bottom right;
             margin-bottom: -4px;
+            ${breakpoints.lg}{
+                width: 100%;
+                object-position: center center;
+            }
         }
+    }
+    ${breakpoints.lg}{
+        flex-direction: column;
+        text-align: center;
     }
 `
 

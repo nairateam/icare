@@ -5,7 +5,7 @@ import logo from '../../assets/icare.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons';
 import { auth } from '../../FirebaseConfig';
-import { getAuth, signOut } from 'firebase/auth'; 
+import { signOut } from 'firebase/auth'; 
 
 const Navigation = () => {
   const user = auth.currentUser;

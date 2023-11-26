@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../styles/theme";
 
 export const DiagnoseWrap = styled.section`
     padding: 40px 50px;
@@ -30,16 +31,34 @@ export const DiagnoseWrap = styled.section`
                     color: #FFFFFFE0;
                 }
         }
+        ${breakpoints.lg}{
+            p{
+                max-width: 60%;
+            }
+            form{
+                h3{
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    ${breakpoints.lg}{
+        padding: 40px;
+    }
+    ${breakpoints.md}{
+        padding: 30px 20px;
     }
 `
 
 export const ResponseWrap = styled.section`
     padding: 10px 50px;
     color: #FFF;
+    margin-bottom: 30px;
     .aiChat{
         padding: 30px 20px;
         border-radius: 4px;
-        background: #FFF;
+        background: #FFFFF0;
         min-width: 200px;
         color: #000;
         span{
@@ -65,5 +84,11 @@ export const ResponseWrap = styled.section`
             font-size: 16px;
             line-height: 26px;
         }
+        ${breakpoints.sm}{
+            padding: 20px;
+        }
+    }
+    ${breakpoints.md}{
+        padding: 10px 25px;
     }
 `

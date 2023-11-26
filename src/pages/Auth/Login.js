@@ -22,7 +22,7 @@ const Login = ({btn}) => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed up 
-            const user = userCredential.user;
+            // const user = userCredential.user;
             // ...
             navigate('/diagnosis')
           })
